@@ -1,0 +1,189 @@
+section.userAdverts.flex {
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    column-gap: 10px;
+    row-gap: 1rem;
+}
+
+
+
+.cardPlus {
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+    border: 4px dotted rgba(93, 188, 252, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.05));
+    filter: blur(2px);
+    content: url('../../../../../public/images/plus2.png');
+}
+
+.light .cardPlus,
+.light .cardPlus:hover {
+    border: none;
+}
+
+.light .cardPlus:hover {
+    background-color: rgba(246, 246, 246);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+}
+
+.cardPlus:hover {
+    border: 4px dotted var(--blue);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+}
+
+.cardPlus img {
+    border-radius: 5px;
+}
+
+.cardPlus .box {
+    padding: 1rem 0.4rem;
+}
+
+.cardPlus .box .title {
+    color: var(--title);
+    text-transform: capitalize;
+}
+
+.cardPlus .box .sub-title {
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.1rem;
+}
+
+.cardPlus .box .icons {
+    justify-content: space-between;
+}
+
+.cardPlus .icon-github,
+.cardPlus .icon-link {
+    font-size: 1.2rem;
+    color: var(--subtitle);
+}
+
+.cardPlus .icon-github:hover,
+.cardPlus .icon-link:hover {
+    font-size: 1.25rem;
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+
+.cardPlus a.link {
+    font-size: 0.9rem;
+    color: var(--blue);
+    margin-right: 12px;
+}
+
+
+/* Under Review Card */
+.card_Under_Review {
+    filter: blur(2px);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(252, 93, 130, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05),
+            rgba(250, 6, 6, 0.05));
+    z-index: 14;
+
+    animation: bg-spin 3s linear infinite;
+
+}
+
+
+.boxGradient {
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.boxGradient:hover {
+    animation-play-state: paused;
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+
+.light .card_Under_Review,
+.light .card_Under_Review:hover {
+    border: none;
+}
+
+.light .card_Under_Review:hover {
+    background-color: rgba(246, 246, 246);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+}
+
+.card_Under_Review:hover {
+    border: 1px solid rgba(253, 7, 64, 0.3);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+}
+
+.card_Under_Review img {
+    border-radius: 5px;
+}
+
+.card_Under_Review .box {
+    padding: 1rem 0.4rem;
+}
+
+.card_Under_Review .box .title {
+    color: var(--title);
+    text-transform: capitalize;
+}
+
+.card_Under_Review .box .sub-title {
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.1rem;
+}
+
+.card_Under_Review .box .icons {
+    justify-content: space-between;
+}
+
+.card_Under_Review .icon-github,
+.card_Under_Review .icon-link {
+    font-size: 1.2rem;
+    color: var(--subtitle);
+}
+
+.card_Under_Review .icon-github:hover,
+.card_Under_Review .icon-link:hover {
+    font-size: 1.25rem;
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+
+.card_Under_Review a.link {
+    font-size: 0.9rem;
+    color: var(--blue);
+    margin-right: 12px;
+}

@@ -1,0 +1,56 @@
+.displayAdvetUser {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 27.5rem;
+}
+
+.submit {
+    background-color: var(--blue);
+
+    padding: 0.75rem 2rem;
+    text-align: center;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 1.8rem;
+    border: 1px solid rgb(63 63 70);
+}
+
+.submit:hover {
+    scale: 0.97;
+}
+
+.InformationAdvert {
+    width: 100rem;
+    height: 20rem;
+}
+
+.InformationAdvert .titleBox {
+    border: 2px solid var(--blue);
+    height: 10%;
+    border-radius: 10px;
+    margin: 0.5rem 0.5rem 0.2rem 0.5rem;
+}
+
+.InformationAdvert .categoryBox {
+    border: 2px solid var(--blue);
+    height: 10%;
+    border-radius: 10px;
+    margin: 0.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.InformationAdvert .mainBox {
+    border: 2px solid var(--blue);
+    height: 60%;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+.InformationAdvert .priceBox {
+    border: 2px solid var(--blue);
+    height: 15%;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
