@@ -12,7 +12,6 @@ const AdvertSchema = mongoose.Schema({
         { path: String }
     ],
     userAdvert: String,
-    // addingDate: Date
     advertState: String,
     //"Approved" or "Under review" 
 })
