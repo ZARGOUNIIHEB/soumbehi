@@ -44,7 +44,7 @@ const UserAdvertUpdate = ({ clickCard, user, hide, adverts, setAdverts }) => {
                                     {imageArray.map((el) =>
                                         <div key={el._id} >
                                             <img style={{ width: "25rem", height: "20rem", objectFit: "cover", borderRadius: "20px" }}
-                                                src={el.path}></img>
+                                                src={`/${el.path}`}></img>
                                         </div>)}
                                 </Slider >
                             </div >

@@ -57,7 +57,7 @@ const UserAdvertsDisplay = ({ adverts, setClickCard, setHide }) => {
                             ref={(el) => (myRefs.current[index] = el)}
                             onClick={() => handleButtonClick(index)}>
                             <img width={177}
-                                src={item.imageAdvert[0].path}
+                                src={`/${item.imageAdvert[0].path}`}
                                 style={{ zIndex: 14 }}
                                 alt="" />
                             <div style={{ width: "177px" }} className="box">

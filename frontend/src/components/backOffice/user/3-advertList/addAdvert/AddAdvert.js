@@ -66,11 +66,11 @@ const AddAdvert = ({ user, handleAdd }) => {
             formData.append('images', selectedFiles[i]);
         }
         try {
-            const response = await axios.post('http://localhost:5004/upload-images', formData);
+            const response = await axios.post('http://localhost:5000/upload-images', formData);
             const result = response.data.uploadedFiles;
             const arrayImages = [];
             for (let i = 0; i < result.length; i++) {
-                const imageObject = { "path": `\\images\\${result[i].filename}` };
+                const imageObject = { "path": `images/${result[i].filename}` };
                 arrayImages.push(imageObject);
             }
             setImageAdvert(arrayImages);
