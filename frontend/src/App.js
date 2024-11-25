@@ -18,6 +18,18 @@ import AdvertForm from './components/backOffice/user/3-advertList/AdvertForm';
 import DisplayAdvert from './components/frontOffice/3-main/DisplayAdvert';
 import Login from './components/frontOffice/6-sign/Login';
 
+import AdminDashboard from './components/backOffice/adminDashboard/AdminDashboard';
+import Dashboard from './components/backOffice/adminDashboard/parts/dashboard/Dashboard';
+import Users from "./components/backOffice/adminDashboard/parts/users/Users";
+import Contacts from "./components/backOffice/adminDashboard/parts/contacts/Contacts";
+import AdvertsList from "./components/backOffice/adminDashboard/parts/adverts/Adverts";
+import Form from "./components/backOffice/adminDashboard/parts/form/Form";
+import Calendar from "./components/backOffice/adminDashboard/parts/calendar/Calendar";
+import FAQ from "./components/backOffice/adminDashboard/parts/faq/Faq";
+import Bar from "./components/backOffice/adminDashboard/parts/barChart/Bar";
+import Pie from "./components/backOffice/adminDashboard/parts/pieChart/Pie";
+import Line from "./components/backOffice/adminDashboard/parts/lineChart/Line";
+import Geography from "./components/backOffice/adminDashboard/parts/geography/Geography";
 
 
 
@@ -29,7 +41,7 @@ function App() {
   // Partie getting data from DataBase
   const getAllAdverts = async () => {
     const data = await fetchAllAdverts();
-    console.log(data.adverts);
+    // console.log(data.adverts);
     dispatch(setAdvert(data.adverts));
   }
   // Render Data from DataBase
@@ -60,6 +72,20 @@ function App() {
           <Route index element={<Core />} />
           <Route path="/userzone/profile" element={<UserUpdate />} />
           <Route path="/userzone/advert" element={<AdvertForm />} />
+        </Route>
+
+        <Route path="/dashboardadmin" element={<AdminDashboard />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/dashboardadmin/users" element={<Users />} />
+          <Route path="/dashboardadmin/contacts" element={<Contacts />} />
+          <Route path="/dashboardadmin/adverts" element={<AdvertsList />} />
+          <Route path="/dashboardadmin/form" element={<Form />} />
+          <Route path="/dashboardadmin/calendar" element={<Calendar />} />
+          <Route path="/dashboardadmin/faq" element={<FAQ />} />
+          <Route path="/dashboardadmin/bar" element={<Bar />} />
+          <Route path="/dashboardadmin/pie" element={<Pie />} />
+          <Route path="/dashboardadmin/line" element={<Line />} />
+          <Route path="/dashboardadmin/geography" element={<Geography />} />
         </Route>
       </Routes>
 

@@ -12,7 +12,7 @@ const UserAdvertsDisplay = ({ adverts, setClickCard, setHide }) => {
     const [refState, setRefState] = useState('');
     const [advertLoad, setAdvertLoad] = useState([]);
 
-    console.log("Adverts from Display:", adverts);
+    // console.log("Adverts from Display:", adverts);
     useEffect(() => {
         if (adverts.length > 0) {
             const updatedArray = [...adverts];
@@ -38,13 +38,13 @@ const UserAdvertsDisplay = ({ adverts, setClickCard, setHide }) => {
             setHide(true);
         }
     };
-    console.log("AdvertLoad :", advertLoad);
+    // console.log("AdvertLoad :", advertLoad);
 
     return (
         <section className="userAdverts flex">
             <AnimatePresence>
                 {advertLoad.map((item, index) => {
-                    return (<>
+                    return (
 
                         <motion.article
                             layout
@@ -73,10 +73,10 @@ const UserAdvertsDisplay = ({ adverts, setClickCard, setHide }) => {
                                 </div>
                             </div>
                         </motion.article>
-                    </>
+
                     );
                 })}
-            </AnimatePresence>
+            </AnimatePresence >
         </section >
     );
 }

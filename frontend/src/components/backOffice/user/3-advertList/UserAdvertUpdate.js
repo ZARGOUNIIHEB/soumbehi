@@ -7,14 +7,29 @@ import { postAdverts } from '../../../../api/AdvertsApi';
 import { useState, useEffect, useRef } from "react";
 
 const UserAdvertUpdate = ({ clickCard, user, hide, adverts, setAdverts }) => {
-    const [imageArray, setImageArray] = useState([])
+
+    console.log("clickCard :", clickCard);
+    console.log("adverts from UserAdvertUpdate :", adverts[0] ? adverts[0].imageAdvert : []);
+    const [imageArray, setImageArray] = useState([]);
+    const [neverEmpty, setNeverEmpty] = useState([]);
+
     useEffect(() => {
 
         if (clickCard && clickCard.imageAdvert && clickCard.imageAdvert.length > 0) {
 
             setImageArray(clickCard.imageAdvert);
+            setNeverEmpty(clickCard);
+        } else {
+            setImageArray(adverts[0] ? adverts[0].imageAdvert : []);
+            setNeverEmpty(adverts[0] ? adverts[0] : []);
         }
-    }, [clickCard]);
+
+
+    }, [clickCard, adverts]);
+
+
+    console.log("imageArray :", imageArray);
+
 
     const settings = {
         dots: true,
@@ -30,7 +45,7 @@ const UserAdvertUpdate = ({ clickCard, user, hide, adverts, setAdverts }) => {
         setAdverts([...adverts, values]);
     }
     // console.log("Hide from User advert update:", hide);
-    console.log("Adverts from User Advert update: ", adverts);
+    // console.log("Adverts from User Advert update: ", adverts);
     return (
         <>
             {hide ?
@@ -53,17 +68,17 @@ const UserAdvertUpdate = ({ clickCard, user, hide, adverts, setAdverts }) => {
                             <div className="advert-details-container">
                                 <div className="advert-detail-row">
                                     <output className="advert-detail-label">Title:</output>
-                                    <output className="advert-detail-value">{clickCard.title}</output>
+                                    <output className="advert-detail-value">{neverEmpty.title}</output>
                                 </div>
                                 <div className="advert-detail-row">
                                     <output className="advert-detail-label">Type:</output>
-                                    <output className="advert-detail-value">{clickCard.type}</output>
+                                    <output className="advert-detail-value">{neverEmpty.type}</output>
                                 </div>
                                 <div className="advert-detail-row">
                                     <output className="advert-detail-label">Description:</output>
                                     <output className="advert-detail-value"
                                         style={{ textAlign: "justify" }}
-                                    >{clickCard.description}</output>
+                                    >{neverEmpty.description}</output>
                                 </div>
                                 <div className="advert-detail-row">
                                     <output style={{ textAlign: "right", width: "90%" }}>Price :</output>

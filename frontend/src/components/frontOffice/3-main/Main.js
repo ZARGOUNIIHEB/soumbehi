@@ -24,7 +24,7 @@ const Main = () => {
         setArr(newArray);
     }
 
-    console.log("adverts from main:", arr[0].imageAdvert[0].path);
+    // console.log("adverts from main:", arr[0].imageAdvert[0].path);
     return (
         <main className="flex">
 

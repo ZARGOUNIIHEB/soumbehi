@@ -97,7 +97,7 @@ export default function Login() {
             if ((values.email === data.email) && (test)) {
 
                 if ((data.role === "Admin")) {
-                    navigate("/");
+                    navigate("/dashboardadmin");
                 } else {
                     console.log("success", success)
                     setSuccess("form submitted successfully");

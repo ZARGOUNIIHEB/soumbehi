@@ -57,7 +57,7 @@ const UpdateUser = () => {
     const user = useSelector((state) => state.userElement);
     const dispatch = useDispatch();
 
-    console.log("This is user from profil :", user);
+    // console.log("This is user from profil :", user);
 
     const [switchOnOff, setSwitchOnOff] = useState(false);
     const [firstName, setFirstName] = useState('');
